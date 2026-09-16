@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dječnik — Arhiv dječjih riječi</title>
+  <meta name="description" content="Arhiv dječjih riječi koje smo govorili prije nego što smo znali prave. Veliki mali dječnik hrvatskoga jezika.">
+  
+  <!-- Google Fonts: Lora (Serif) & Roboto (Sans) s podrškom za hrvatske dijakritike -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' font-family='serif' fill='%238B1E3F'>d.</text></svg>">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       GORNJA TRAKA & NAVIGACIJA (07. WEB STRANICA PRIMJER)
+       ========================================================================== -->
+  <header class="site-header">
+    <div class="browser-bar">
+      <div class="browser-dots">
+        <span class="browser-dot"></span>
+        <span class="browser-dot"></span>
+        <span class="browser-dot"></span>
+      </div>
+      <span class="browser-tag">Veliki mali dječnik hrvatskoga jezika • Zagreb</span>
+      <span style="font-size: 0.75rem; color: var(--c-burgundy); font-weight: 500;">dječnik.hr</span>
+    </div>
+
+    <div class="header-main">
+      <a href="#" class="logo-link" aria-label="Dječnik početna">
+        <span class="logo-text">dječnik.hr</span>
+        <span class="logo-badge">®</span>
+      </a>
+
+      <nav>
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="#o-projektu" class="nav-link">o projektu</a></li>
+          <li><a href="#rijeci" class="nav-link">riječi</a></li>
+          <li><a href="#abecednik" class="nav-link">abecednik</a></li>
+          <li><a href="#citac" class="nav-link">otvori knjigu</a></li>
+          <li>
+            <button class="btn-submit-nav trigger-submit-modal" type="button">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="22" y1="2" x2="11" y2="13"></line>
+                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+              </svg>
+              pošalji riječ
+            </button>
+          </li>
+        </ul>
+      </nav>
+
+      <button class="menu-toggle" id="menu-toggle" aria-label="Otvori navigaciju">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       HERO SEKCIJA S 3D KNJIGOM (07. WEB STRANICA PRIMJER & 01. NASLOVNICA)
+       ========================================================================== -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <span class="hero-tagline">Arhiv dječje mašte</span>
+          <h1 class="hero-title">
+            Arhiv dječjih riječi koje smo govorili prije nego što smo znali prave.
+          </h1>
+          <div class="hero-divider"></div>
+          
+          <div class="hero-cta-group">
+            <a href="#submit" class="hero-cta-link trigger-submit-modal">
+              Pošalji svoju riječ
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+            <a href="#citac" class="hero-sub-btn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+              </svg>
+              Listaj dječnik
+            </a>
+          </div>
+
+
+        </div>
+
+        <!-- 3D Prikaz knjige -->
+        <div class="hero-book-wrap">
+          <div class="book-card" id="hero-book" title="Klikni za otvaranje knjige">
+            <div class="book-ribbon"></div>
+            
+            <div class="book-cover-content">
+              <div class="book-title-group">
+                <span class="book-lead-text">veliki</span>
+                <span class="book-big-text">mali</span>
+                <span class="book-desc-text">dječnik hrvatskoga jezika</span>
+              </div>
+              <div class="book-publisher">LKGR.</div>
+            </div>
+
+            <div class="book-hint-badge">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline-block; vertical-align:middle; margin-right:4px;">
+                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+              </svg>
+              Klikni i otvori knjigu
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       STRANICA KNJIGE - INTERAKTIVNI ČITAČ (08. STRANICA KNJIGE PRIMJER)
+       ========================================================================== -->
+  <section class="reader-section" id="citac">
+    <div class="container">
+      <div class="section-intro">
+        <span class="section-label">Stranica knjige</span>
+        <h2 class="section-title">Otvoreni primjerak Dječnika</h2>
+        <p class="section-desc">Listajte kroz riječi slovo po slovo i otkrijte kako djeca objašnjavaju svijet oko sebe.</p>
+      </div>
+
+      <div class="book-spread-container">
+        <div class="open-book">
+          <!-- Središnji nabor i vrpca -->
+          <div class="book-spine-crease"></div>
+          <div class="spread-ribbon"></div>
+
+          <!-- Lijeva stranica: Slovo i popis riječi -->
+          <div class="page-left">
+            <div class="page-letter-block">
+              <span class="page-huge-letter" id="reader-letter">k</span>
+            </div>
+            <ul class="page-word-list" id="reader-word-list">
+              <!-- Dinamički popis riječi za odabrano slovo -->
+            </ul>
+            <div class="page-number" id="reader-page-num">120</div>
+          </div>
+
+          <!-- Desna stranica: Odabrana riječ s definicijom i autorom -->
+          <div class="page-right">
+            <div>
+              <div class="entry-head">
+                <h3 class="entry-word" id="reader-word">klopavac</h3>
+                <div class="entry-real-word" id="reader-real-word">= poklopac</div>
+                <div class="entry-divider"></div>
+              </div>
+              <p class="entry-definition" id="reader-definition">
+                pokretni predmet koji poklapa nešto da se ne vidi ili ne izlije.
+              </p>
+            </div>
+
+            <div class="entry-footer">
+              <div class="entry-speaker" id="reader-speaker">A.G. (6)</div>
+              <div class="entry-date" id="reader-date">04/06/2024</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Navigacijske kontrole čitača -->
+        <div class="reader-controls">
+          <button class="btn-reader-nav" id="reader-prev-btn" aria-label="Prethodna riječ">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="19" y1="12" x2="5" y2="12"></line>
+              <polyline points="12 19 5 12 12 5"></polyline>
+            </svg>
+            Prethodna
+          </button>
+          
+          <button class="btn-reader-share" id="reader-share-btn" title="Podijeli ovu riječ">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="18" cy="5" r="3"></circle>
+              <circle cx="6" cy="12" r="3"></circle>
+              <circle cx="18" cy="19" r="3"></circle>
+              <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+              <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+            </svg>
+            Podijeli riječ
+          </button>
+
+          <button class="btn-reader-nav" id="reader-next-btn" aria-label="Sljedeća riječ">
+            Sljedeća
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       ABECEDNIK I ARHIV RIJEČI (05. KARTICA RIJEČI & 09. IZLOŽBENA PLOČICA)
+       ========================================================================== -->
+  <section class="archive-section" id="rijeci">
+    <div class="container">
+      <div class="section-intro" id="abecednik">
+        <span class="section-label">Abecednik i arhiv</span>
+        <h2 class="section-title">Sve riječi na jednom mjestu</h2>
+        <p class="section-desc">Pretražujte po dječjoj riječi, pravom značenju ili filtrirajte po početnom slovu.</p>
+      </div>
+
+      <div class="filter-bar">
+        <!-- Pretraživanje uživo -->
+        <div class="search-input-wrap">
+          <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input 
+            type="text" 
+            id="search-input" 
+            class="search-input" 
+            placeholder="Pretraži arhiv (npr. turutka, poklopac, svjetlo)..." 
+            autocomplete="off"
+            aria-label="Pretraga dječjih riječi"
+          >
+          <button class="clear-search-btn" id="clear-search-btn" aria-label="Očisti pretragu">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Hrvatske abeceda -->
+        <div class="alphabet-scroll" id="alphabet-list">
+          <!-- Popis slova A - Ž -->
+        </div>
+      </div>
+
+      <!-- Brojač -->
+      <div class="archive-stats">
+        <span class="archive-count" id="archive-count">Prikazano 0 riječi</span>
+        <button class="btn-submit-nav trigger-submit-modal" style="padding: 6px 14px; font-size: 0.85rem;">
+          + Dodaj riječ
+        </button>
+      </div>
+
+      <!-- Mreža kartica riječi -->
+      <div class="words-grid" id="words-grid">
+        <!-- Dinamički generirane kartice -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       O PROJEKTU & MONOGRAM (03. MONOGRAM & 09. IZLOŽBENA PLOČICA)
+       ========================================================================== -->
+  <section class="about-section" id="o-projektu">
+    <div class="container">
+      <div class="about-grid">
+        
+        <!-- Monogram d. -->
+        <div class="monogram-box">
+          <div class="monogram-huge">d.</div>
+          <div class="monogram-caption">
+            Naš pečat.<br>
+            Naše slovo.<br>
+            Naš Dječnik.
+          </div>
+          <div class="monogram-line"></div>
+        </div>
+
+        <!-- Tekst o projektu -->
+        <div class="about-content">
+          <span class="section-label">O projektu</span>
+          <blockquote class="about-quote">
+            Svaka riječ ima svoje pravo mjesto.
+          </blockquote>
+          
+          <p class="about-body">
+            <strong>Dječnik</strong> je arhiv i digitalni muzej neologizama, jezičnih dosjetki i riječi koje su djeca stvarala prije nego što su naučila standardni jezik. Djeca ne govore pogrešno — ona intuitivno objašnjavaju svijet točno onako kako ga osjećaju, stvarajući riječi koje su često puno točnije, poetičnije i toplije od stvarnih.
+          </p>
+
+          <p class="about-body">
+            Projekt je osnovan u Zagrebu s ciljem očuvanja obiteljskih jezičnih uspomena. Želimo spasiti te dragocjene izraze od zaborava i okupiti ih u jedinstveni spomenik dječjoj jezičnoj genijalnosti.
+          </p>
+
+          <div class="about-plaque">
+            <div class="about-plaque-title">Izložbena etiketa br. 01</div>
+            <div>„Turutka = kruška. Izgovarala: M.G. (5), Zagreb, 2023.”</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       PODNOŽJE (FOOTER)
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="logo-text">dječnik.hr</div>
+          <p class="footer-desc">
+            Arhiv dječjih riječi koje smo govorili prije nego što smo znali prave. Veliki mali dječnik hrvatskoga jezika.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Navigacija</h4>
+          <ul class="footer-links">
+            <li><a href="#citac">Otvorena knjiga</a></li>
+            <li><a href="#rijeci">Arhiv riječi</a></li>
+            <li><a href="#abecednik">Abecednik (A–Ž)</a></li>
+            <li><a href="#o-projektu">O projektu i manifest</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Zajednica</h4>
+          <ul class="footer-links">
+            <li>
+              <a href="#" class="trigger-submit-modal footer-social-dm">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="22" y1="2" x2="11" y2="13"></line>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+                Pošalji svoju riječ
+              </a>
+            </li>
+            <li><span style="font-size: 0.9rem; color: var(--c-charcoal-muted);">Instagram: <b>@djecnik.hr</b></span></li>
+            <li><span style="font-size: 0.85rem; color: var(--c-charcoal-light);">Pošaljite nam riječi i u DM.</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2024–2026 Dječnik. Sva prava pridržana. Zagreb, Hrvatska.</div>
+        <div style="font-family: var(--font-serif); font-style: italic; color: var(--c-burgundy);">veliki <b>mali</b> dječnik</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       MODAL - POŠALJI SVOJU RIJEČ (06. STORY - POZIV NA RIJEČI)
+       ========================================================================== -->
+  <div class="modal-backdrop" id="submit-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" id="close-submit-modal" aria-label="Zatvori">✕</button>
+      
+      <div class="modal-header">
+        <span class="modal-label">Poziv na riječi</span>
+        <h3 class="modal-title" id="modal-title">Kako si govorio/la _____?</h3>
+        <p class="modal-subtitle">
+          Molimo vas da se usudite poslati svoju riječ, ali i pravu riječ na koju ste mislili dok još niste znali tu riječ.
+        </p>
+      </div>
+
+      <form id="submit-word-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="input-word">Dječja riječ *</label>
+            <input type="text" id="input-word" class="form-input" placeholder="npr. klopavac, turutka..." required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="input-real-word">Prava riječ / značenje *</label>
+            <input type="text" id="input-real-word" class="form-input" placeholder="npr. poklopac, kruška..." required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="input-def">Što je to točno značilo? (Opis ili anegdota) *</label>
+          <textarea id="input-def" class="form-textarea" placeholder="Napišite kako je dijete koristilo tu riječ ili što je točno mislilo..." required></textarea>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="input-speaker">Ime ili inicijali djeteta</label>
+            <input type="text" id="input-speaker" class="form-input" placeholder="npr. A.G. ili Marko">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="input-age">Dob u tom trenutku</label>
+            <input type="number" id="input-age" class="form-input" placeholder="npr. 5" min="1" max="15">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="input-location">Grad i godina</label>
+          <input type="text" id="input-location" class="form-input" placeholder="npr. Zagreb, 2024.">
+        </div>
+
+        <button type="submit" class="btn-submit-form">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="22" y1="2" x2="11" y2="13"></line>
+            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+          </svg>
+          Pošaljite nam svoju riječ
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       MODAL - DIJELJENJE KARTICE (05. KARTICA RIJEČI FORMAT 9:16)
+       ========================================================================== -->
+  <div class="modal-backdrop" id="share-modal" role="dialog" aria-modal="true">
+    <div class="modal-dialog" style="max-width: 480px; text-align: center;">
+      <button class="modal-close-btn" id="close-share-modal" aria-label="Zatvori">✕</button>
+      
+      <div class="modal-header" style="text-align: center;">
+        <span class="modal-label">Kartica riječi (Format 9:16)</span>
+        <h3 class="modal-title" style="font-size: 1.6rem;">Podijeli na Instagram Story</h3>
+        <p class="modal-subtitle">Preuzmite sliku ili kopirajte tekst i podijelite ovu dječju riječ.</p>
+      </div>
+
+      <div class="share-preview-container">
+        <div class="story-card-preview" id="share-story-card">
+          <!-- Dinamički pregled story kartice -->
+        </div>
+      </div>
+
+      <div class="share-actions">
+        <button class="btn-share-download" id="download-card-btn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line x1="12" y1="15" x2="12" y2="3"></line>
+          </svg>
+          Preuzmi sliku (PNG)
+        </button>
+
+        <button class="btn-share-copy" id="copy-card-btn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+          </svg>
+          Kopiraj tekst
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast obavijest -->
+  <div class="toast-notice" id="toast"></div>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
